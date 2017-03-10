@@ -12,5 +12,6 @@ CREATE TABLE items (
 );
 
 /*  Execute this file from the command line by typing:
- *    mysql -u root < server/schema.sql
+ *    mysql -u root < schema.sql
+ *    To login to sql :   mysql -u root -p
  *  to create the database and the tables.*/

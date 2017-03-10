@@ -5,6 +5,7 @@ import List from './components/List.jsx';
 
 class App extends React.Component {
   constructor(props) {
+    console.log('inside constructor of App');
     super(props);
     this.state = { 
       items: []
@@ -12,20 +13,24 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    console.log('inside component did mount');
     $.ajax({
       url: '/items', 
       success: (data) => {
+        console.log('inside success of componentDidMount');
         this.setState({
           items: data
         })
       },
       error: (err) => {
+        console.log('inside err of componentDidMount');
         console.log('err', err);
       }
     });
   }
 
   render () {
+    console.log('inside render of app class');
     return (<div>
       <h1>Item List</h1>
       <List items={this.state.items}/>
