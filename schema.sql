@@ -1,15 +1,25 @@
-DROP DATABASE IF EXISTS test;
+DROP DATABASE IF EXISTS royale;
 
-CREATE DATABASE test;
+CREATE DATABASE royale;
 
-USE test;
+USE royale;
 
-CREATE TABLE items (
+CREATE TABLE cards (
   id int NOT NULL AUTO_INCREMENT,
-  quantity integer NOT NULL,
-  description varchar(50) NOT NULL,
+  name varchar(20) NOT NULL,
+  type varchar(20) NOT NULL,
+  rarity varchar(20) NOT NULL,
+  description varchar(200) NOT NULL,
+  elixirCost varchar(20) NOT NULL,
   PRIMARY KEY (ID)
 );
+
+/*idName: 'the-log',
+    rarity: 'Legendary',
+    type: 'Spell',
+    name: 'The Log',
+    description: 'A spilt bottle of Rage turned an innocent tree trunk into "The Log". Now it seeks revenge by crushing anything in its path!',
+    elixirCost: 2,*/
 
 /*  Execute this file from the command line by typing:
  *    mysql -u root < schema.sql
