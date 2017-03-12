@@ -16,7 +16,7 @@ app.use(express.static(__dirname + '/../react-client/dist'));
 
 //app.use();
 
-app.get('/items', function (req, res) {
+app.get('/cards', function (req, res) {
 
   cards.selectAll(function(err, data) {
     if(err) {

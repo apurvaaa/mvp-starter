@@ -24,10 +24,10 @@ var initializeDb = function(data) {
   //data = [{} ,{} ,{}]
   //console.log('inside initializeDb. data : ', data[2]);
   connection.query('TRUNCATE TABLE cards');
-  var sql = 'INSERT INTO cards (name, type, rarity, description, elixirCost) VALUES (?, ?, ?, ?, ?)';
+  var sql = 'INSERT INTO cards (name, idName, type, rarity, description, elixirCost) VALUES (?, ?, ?, ?, ?, ?)';
   for (var i = 0; i < data.length; i++) {
     console.log('inside initializeDb for loop. data[i] : ', data[i].name, ' ', data[i].order);
-    connection.query(sql, [data[i].name, data[i].type, data[i].rarity, data[i].description, data[i].elixirCost], function(err, results) {
+    connection.query(sql, [data[i].name, data[i].idName ,data[i].type, data[i].rarity, data[i].description, data[i].elixirCost], function(err, results) {
       if (err) {
         console.log('error while inserting into db : ', err);
       } else {

@@ -1,10 +1,18 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
 
-const ListItem = (props) => (
+
+
+const ButtonToolbar = () => (
+ 
+    <Button bsStyle="primary">Primary</Button>
+);
+
+const ListItem = ({card}) => (
   <div>
-    {props.item.name } - { props.item.elixirCost }
-    <img src='http://www.clashapi.xyz/images/cards/{(props.item.name).toLowerCase()}.png'/>
+    <ButtonToolbar/>
+    {card.name } - { card.elixirCost }
+    <img src={`http://www.clashapi.xyz/images/cards/${card.idName}.png`}/>
   </div>
 )
-
 export default ListItem;

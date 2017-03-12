@@ -7,10 +7,11 @@ USE royale;
 CREATE TABLE cards (
   id int NOT NULL AUTO_INCREMENT,
   name varchar(20) NOT NULL,
+  idName varchar(20) NOT NULL,
   type varchar(20) NOT NULL,
   rarity varchar(20) NOT NULL,
   description varchar(200) NOT NULL,
-  elixirCost varchar(20) NOT NULL,
+  elixirCost int NOT NULL,
   PRIMARY KEY (ID)
 );
 
