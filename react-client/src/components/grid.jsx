@@ -6,10 +6,14 @@ import { Table } from 'react-bootstrap';
 const RoyaleGrid = ({cards}) => (
   <Table responsive>
     <tbody>
-     {/* { cards.map(card => <GridRow card={card} />)}*/}
-    <GridRow cards={cards.slice(0, 5)} />
-
-    {console.log('checking console.log, cards. slice: ', cards.slice(0, 5))}
+     {/* { cards.map(card => <GridRow card={card} />)}*/}{
+     	
+     	cards.map(function (card, i) {
+     		if ((i % 5 === 0) && (i !== 0)) {
+     	      return <GridRow cards={cards.slice(i - 5, i)} />
+     		} 
+     	})
+     }
 
     </tbody>
   </Table>
