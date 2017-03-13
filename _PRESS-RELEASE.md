@@ -17,25 +17,32 @@ Once the project moves into development, the press release can be used as a touc
  -->
  
 ## Heading ##
-  > Clash Royale Card Displayer.
+  > Clash Royale Random Deck Generator.
 
 ## Sub-Heading ##
-  > Anybody who want to know all the cards available. s
+  > Anybody who loves playing Clash Royale should definitely try this! We are all in need of new decks to spice up our games.
 
 ## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  > Its is always great to try utterly new and rediculous decks. Challenging friends with almost un-winnable or laughable decks and still winning the match by using the element of surprise a rediculous deck can provide.
 
 ## Problem ##
-  > Describe the problem your product solves.
+  > It is such a pain to click on each card to figure out the stats. Also, Using same old decks gets boring easily.
 
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
+  > This provides an interface where we can get data of all the cards in one place. Also, we can try out fresh new decks which will be generated everytime we refresh the page.
 
 ## Quote from You ##
-  > A quote from a spokesperson in your company.
+  > Clash Royale Deck Generator, do you dare go for the challenge ?
 
 ## How to Get Started ##
-  > Describe how easy it is to get started.
+  > So easy! 
+  1. webpack -d --watch
+  2. mysql.server start
+  3. mysql -u root < /path to schema/schema.sql
+  4. nodemon server/index.js
+
+  Now go to your browser! at port 3000!
+
 
 ## Customer Quote ##
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
