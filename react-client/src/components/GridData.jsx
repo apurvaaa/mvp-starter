@@ -1,12 +1,19 @@
 import React from 'react';
-import ListItem from './ListItem.jsx';
-// import { code } from 'react-bootstrap';
+// import tt from './ToolTip.jsx';
+import { OverlayTrigger } from 'react-bootstrap';
+import { Tooltip } from 'react-bootstrap';
+
+
+const tt =(
+  <Tooltip placement="top" className="in" id="tooltip-top">Something here</Tooltip>
+);
+
 
 const GridData = ({card}) => (
   <td>
-    <img src = {`http://www.clashapi.xyz/images/cards/${card.idName}.png`} />
-    {card.name} : needs {card.elixirCost} elixir
-    {card.description}
+    <OverlayTrigger placement="top" overlay={tt}>
+      <img src = {`http://www.clashapi.xyz/images/cards/${card.idName}.png`} />
+    </OverlayTrigger>
   </td>
 );
 

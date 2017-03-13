@@ -6,9 +6,8 @@ import GridData from './GridData.jsx';
 
 const GridRow = ({cards}) => (
     <tr>
-        
-       { cards.map(card => <GridData card={card} />)}
-
+       
+       { cards.map(card => <GridData card={card} key={card.idName}/>)}
       	
     </tr>
 );

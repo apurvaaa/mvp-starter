@@ -9,8 +9,8 @@ const RoyaleGrid = ({cards}) => (
      {/* { cards.map(card => <GridRow card={card} />)}*/}{
      	
      	cards.map(function (card, i) {
-     		if ((i % 5 === 0) && (i !== 0)) {
-     	      return <GridRow cards={cards.slice(i - 5, i)} />
+     		if ((i % 5 === 4)) {
+     	      return <GridRow cards={cards.slice(i - 4, i + 1)} key={card.idName} />
      		} 
      	})
      }

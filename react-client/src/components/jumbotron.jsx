@@ -1,8 +1,9 @@
 import React from 'react';
+// import styles from './../styles.css';
 import { Jumbotron } from 'react-bootstrap';
 
 const RoyaleHeader = () => (
-  <Jumbotron>
+  <Jumbotron >
     <h1>Clash Royale Deck Generator</h1>
     <p>Best place to find unusual decks to try out with friends.</p>
   </Jumbotron>

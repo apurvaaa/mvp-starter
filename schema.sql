@@ -15,6 +15,8 @@ CREATE TABLE cards (
   PRIMARY KEY (ID)
 );
 
+
+
 /*idName: 'the-log',
     rarity: 'Legendary',
     type: 'Spell',

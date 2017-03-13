@@ -27,12 +27,24 @@ app.get('/cards', function (req, res) {
   });
 });
 
+app.get('/random', function (req, res) {
+  console.log('inside server random');
+  populate.fetchRandom(function(err, data) {
+    if(err) {
+      res.sendStatus(500);
+    } else {
+      res.json(data);
+    }
+});
+});
+
 app.listen(3000, function() {
   console.log('listening on port 3000!');
   populate.fetchData(function(JSONData) {
-  	console.log('inside callback of fetch data', JSONData[0]);
+  	// console.log('inside callback of fetch data', JSONData[0]);
     cards.initializeDb(JSONData);
   });
+
   //console.log('fetched data : ', populate.fetchedData);
   
 });
