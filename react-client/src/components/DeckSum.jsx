@@ -15,9 +15,9 @@ const DeckSum = ({cards}) => {
     cards.forEach(function(card){
           console.log('card : ', card);
           res+= Number.parseInt(card.elixirCost);
-          if (card.type === 'buildings') {
+          if (card.type === 'Building') {
             buildings++;
-          } else if (card.type === 'spells') {
+          } else if (card.type === 'Spell') {
             spells++;
           } else {
             troops++;
